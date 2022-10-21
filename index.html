@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body,div{
+            font-size: 90px;
+            text-align: center;
+            background-color: rgb(81, 81, 81);
+        }
+        button{
+            font-size: 60px;
+        }
+        #cont{
+            font-size: 160px;
+            color: rgb(0, 160, 5);
+        }
+    </style>
+    <script>
+        var kolory = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","R","S","T","U","W","Z"]
+        var rand
+        var rem
+        function ran(){
+            
+            var rand = Math.floor(Math.random()*kolory.length)
+            var los = kolory[rand]
+            rem = kolory.splice(rand,1)
+
+            document.getElementById("cont").innerHTML = los
+            document.getElementById("usu").innerHTML += rem+", "
+  
+            
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="ran()">Losuj</button>
+    <br>
+
+    <div id="cont">
+
+
+    </div>
+    <div id="usu">
+
+    </div>
+                
+
+
+</body>
+
+</html>
